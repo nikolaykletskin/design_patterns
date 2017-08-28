@@ -7,6 +7,7 @@ use DesignPatterns\Creational\Builder\Director;
 use DesignPatterns\Creational\FactoryMethod\ItalianFactory;
 use DesignPatterns\Creational\Prototype\BarBookPrototype;
 use DesignPatterns\Creational\Prototype\FooBookPrototype;
+use DesignPatterns\Creational\Singleton\Singleton;
 
 spl_autoload_register(function($className) {
     $path = str_replace('\\', '/', $className);
@@ -49,3 +50,6 @@ for ($i = 0; $i < 5; $i++) {
     $book = clone $book_prototype;
     $book->setTitle("Book {$i}");
 }*/
+
+// Singleton
+/*Singleton::getInstance()->do();*/
