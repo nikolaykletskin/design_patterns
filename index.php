@@ -8,6 +8,9 @@ use DesignPatterns\Creational\FactoryMethod\ItalianFactory;
 use DesignPatterns\Creational\Prototype\BarBookPrototype;
 use DesignPatterns\Creational\Prototype\FooBookPrototype;
 use DesignPatterns\Creational\Singleton\Singleton;
+use DesignPatterns\Structural\Adapter\Kindle;
+use DesignPatterns\Structural\Adapter\EBookAdapter;
+use DesignPatterns\Structural\Adapter\Book;
 
 spl_autoload_register(function($className) {
     $path = str_replace('\\', '/', $className);
@@ -53,3 +56,15 @@ for ($i = 0; $i < 5; $i++) {
 
 // Singleton
 /*Singleton::getInstance()->do();*/
+
+// Adapter
+/*$book = new Book();
+$book->open();
+$book->turnPage();
+$book->getPage();
+
+$ebook = new Kindle();
+$adapter = new EBookAdapter($ebook);
+$adapter->open();
+$adapter->turnPage();
+var_dump($adapter->getPage());*/
