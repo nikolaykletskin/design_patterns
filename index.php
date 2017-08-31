@@ -11,6 +11,11 @@ use DesignPatterns\Creational\Singleton\Singleton;
 use DesignPatterns\Structural\Adapter\Kindle;
 use DesignPatterns\Structural\Adapter\EBookAdapter;
 use DesignPatterns\Structural\Adapter\Book;
+use DesignPatterns\Structural\Bridge\HelloWorldService;
+use DesignPatterns\Structural\Bridge\HtmlFormatter;
+use DesignPatterns\Structural\Decorator\WebService;
+use DesignPatterns\Structural\Decorator\XmlRenderer;
+use DesignPatterns\Structural\Decorator\JsonRenderer;
 
 spl_autoload_register(function($className) {
     $path = str_replace('\\', '/', $className);
@@ -68,3 +73,14 @@ $adapter = new EBookAdapter($ebook);
 $adapter->open();
 $adapter->turnPage();
 var_dump($adapter->getPage());*/
+
+// Bridge
+/*$service = new HelloWorldService(new HtmlFormatter());
+echo $service->get();*/
+
+// Decorator
+$decorator = new XmlRenderer(new WebService('hello'));
+echo $decorator->renderData();
+
+$decorator = new JsonRenderer(new WebService('hello'));
+echo $decorator->renderData();
