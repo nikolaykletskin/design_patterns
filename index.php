@@ -94,3 +94,16 @@ $form->addElement(new TextElement('text'));
 $form->addElement(new InputElement());
 $form->addElement(new $form());
 echo $form->render();*/
+
+// Flyweight
+/*$characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+    'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+$fonts = ['Arial', 'Times New Roman', 'Verdana', 'Helvetica'];
+$factory = new \DesignPatterns\Structural\Flyweight\FlyweightFactory();
+foreach ($characters as $character) {
+    foreach ($fonts as $font) {
+        $flyweight = $factory->get($character);
+        $flyweight->render($font);
+    }
+}
+echo $factory->count();*/
