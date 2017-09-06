@@ -113,3 +113,10 @@ echo $factory->count();*/
 var_dump($proxy->isDirty());
 $proxy = new DesignPatterns\Structural\Proxy\RecordProxy();
 var_dump($proxy->isDirty());*/
+
+// Command
+$invoker = new \DesignPatterns\Behavioral\Command\Invoker();
+$receiver = new \DesignPatterns\Behavioral\Command\Receiver();
+$invoker->setCommand(new \DesignPatterns\Behavioral\Command\HelloCommand($receiver));
+$invoker->run();
+echo $receiver->getOutput();
