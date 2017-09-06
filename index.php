@@ -16,6 +16,9 @@ use DesignPatterns\Structural\Bridge\HtmlFormatter;
 use DesignPatterns\Structural\Decorator\WebService;
 use DesignPatterns\Structural\Decorator\XmlRenderer;
 use DesignPatterns\Structural\Decorator\JsonRenderer;
+use DesignPatterns\Structural\Composite\Form;
+use DesignPatterns\Structural\Composite\TextElement;
+use DesignPatterns\Structural\Composite\InputElement;
 
 spl_autoload_register(function($className) {
     $path = str_replace('\\', '/', $className);
@@ -79,8 +82,15 @@ var_dump($adapter->getPage());*/
 echo $service->get();*/
 
 // Decorator
-$decorator = new XmlRenderer(new WebService('hello'));
+/*$decorator = new XmlRenderer(new WebService('hello'));
 echo $decorator->renderData();
 
 $decorator = new JsonRenderer(new WebService('hello'));
-echo $decorator->renderData();
+echo $decorator->renderData();*/
+
+// Composite
+/*$form = new Form();
+$form->addElement(new TextElement('text'));
+$form->addElement(new InputElement());
+$form->addElement(new $form());
+echo $form->render();*/
