@@ -107,3 +107,9 @@ foreach ($characters as $character) {
     }
 }
 echo $factory->count();*/
+
+// Proxy
+/*$proxy = new DesignPatterns\Structural\Proxy\RecordProxy([true, false, true]);
+var_dump($proxy->isDirty());
+$proxy = new DesignPatterns\Structural\Proxy\RecordProxy();
+var_dump($proxy->isDirty());*/
