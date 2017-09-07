@@ -115,8 +115,15 @@ $proxy = new DesignPatterns\Structural\Proxy\RecordProxy();
 var_dump($proxy->isDirty());*/
 
 // Command
-$invoker = new \DesignPatterns\Behavioral\Command\Invoker();
+/*$invoker = new \DesignPatterns\Behavioral\Command\Invoker();
 $receiver = new \DesignPatterns\Behavioral\Command\Receiver();
 $invoker->setCommand(new \DesignPatterns\Behavioral\Command\HelloCommand($receiver));
 $invoker->run();
-echo $receiver->getOutput();
+echo $receiver->getOutput();*/
+
+// Facade
+/*$bios = new Bios();
+$os = new Os();
+$facade = new \DesignPatterns\Structural\Facade\Facade($bios, $os);
+$facade->turnOn();
+$facade->turnOff();*/
