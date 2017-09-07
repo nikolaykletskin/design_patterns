@@ -135,3 +135,15 @@ $facade->turnOff();*/
 );
 $request = new Request();
 $chain->handle($request);*/
+
+// Iterator
+/*$book_list = new \DesignPatterns\Behavioral\Iterator\BookList();
+$book_list->addBook(new \DesignPatterns\Behavioral\Iterator\Book('Learning PHP Design Patterns', 'William Sanders'));
+$book_list->addBook(new \DesignPatterns\Behavioral\Iterator\Book('Professional Php Design Patterns', 'Aaron Saray'));
+$book_list->addBook(new \DesignPatterns\Behavioral\Iterator\Book('Clean Code', 'Robert C. Martin'));
+
+$books = [];
+foreach ($book_list as $book) {
+    $books[] = $book->getAuthorAndTitle();
+}
+var_dump($books);*/
