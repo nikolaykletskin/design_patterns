@@ -127,3 +127,11 @@ $os = new Os();
 $facade = new \DesignPatterns\Structural\Facade\Facade($bios, $os);
 $facade->turnOn();
 $facade->turnOff();*/
+
+// Chain Of Responsibilities
+/*$chain = new \DesignPatterns\Behavioral\ChainOfResponsibilities\Responsible\HttpInMemoryCacheHandler(
+    ['/foo/bar?index=1' => 'Hello In Memory!'],
+    new \DesignPatterns\Behavioral\ChainOfResponsibilities\Responsible\SlowDatabaseHandler()
+);
+$request = new Request();
+$chain->handle($request);*/
