@@ -147,3 +147,8 @@ foreach ($book_list as $book) {
     $books[] = $book->getAuthorAndTitle();
 }
 var_dump($books);*/
+
+// Mediator
+/*$client = new \DesignPatterns\Behavioral\Mediator\Subsystem\Client();
+new \DesignPatterns\Behavioral\Mediator\Mediator(new \DesignPatterns\Behavioral\Mediator\Subsystem\Database(), $client, new \DesignPatterns\Behavioral\Mediator\Subsystem\Server());
+$client->request();*/
