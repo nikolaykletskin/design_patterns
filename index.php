@@ -152,3 +152,13 @@ var_dump($books);*/
 /*$client = new \DesignPatterns\Behavioral\Mediator\Subsystem\Client();
 new \DesignPatterns\Behavioral\Mediator\Mediator(new \DesignPatterns\Behavioral\Mediator\Subsystem\Database(), $client, new \DesignPatterns\Behavioral\Mediator\Subsystem\Server());
 $client->request();*/
+
+// Memento
+$ticket = new \DesignPatterns\Behavioral\Memento\Ticket();
+$ticket->open();
+$openedState = $ticket->getState();
+$memento = $ticket->saveToMemento();
+$ticket->assign();
+var_dump($ticket->getState());
+$ticket->restoreFromMemento($memento);
+var_dump($ticket->getState());
