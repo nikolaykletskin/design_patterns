@@ -154,11 +154,25 @@ new \DesignPatterns\Behavioral\Mediator\Mediator(new \DesignPatterns\Behavioral\
 $client->request();*/
 
 // Memento
-$ticket = new \DesignPatterns\Behavioral\Memento\Ticket();
+/*$ticket = new \DesignPatterns\Behavioral\Memento\Ticket();
 $ticket->open();
 $openedState = $ticket->getState();
 $memento = $ticket->saveToMemento();
 $ticket->assign();
 var_dump($ticket->getState());
 $ticket->restoreFromMemento($memento);
-var_dump($ticket->getState());
+var_dump($ticket->getState());*/
+
+// Observer
+/*$observer = new \DesignPatterns\Behavioral\Observer\UserObserver();
+$user = new \DesignPatterns\Behavioral\Observer\User();
+$user->attach($observer);
+$user->changeEmail('user@example.com');
+var_dump($observer->getChangedUsers());*/
+
+// State
+$order = new \DesignPatterns\Behavioral\State\CreateOrder();
+$contextOrder = new \DesignPatterns\Behavioral\State\ContextOrder();
+$contextOrder->setState($order);
+$contextOrder->done();
+var_dump($contextOrder->getStatus());
