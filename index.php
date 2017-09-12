@@ -185,6 +185,13 @@ $elements = $obj->sort();
 var_dump($elements);*/
 
 // Template Method
-$beachJourney = new DesignPatterns\Behavioral\TemplateMethod\BeachJourney();
+/*$beachJourney = new DesignPatterns\Behavioral\TemplateMethod\BeachJourney();
 $beachJourney->takeATrip();
-var_dump($beachJourney->getThingsToDo());
+var_dump($beachJourney->getThingsToDo());*/
+
+$visitor = new \DesignPatterns\Behavioral\Visitor\RoleVisitor();
+$roles = [new \DesignPatterns\Behavioral\Visitor\User('Dominik'), new \DesignPatterns\Behavioral\Visitor\Group('Administrators')];
+foreach ($roles as $role) {
+    $role->accept($visitor);
+}
+var_dump($visitor->getVisited());
