@@ -171,8 +171,15 @@ $user->changeEmail('user@example.com');
 var_dump($observer->getChangedUsers());*/
 
 // State
-$order = new \DesignPatterns\Behavioral\State\CreateOrder();
+/*$order = new \DesignPatterns\Behavioral\State\CreateOrder();
 $contextOrder = new \DesignPatterns\Behavioral\State\ContextOrder();
 $contextOrder->setState($order);
 $contextOrder->done();
-var_dump($contextOrder->getStatus());
+var_dump($contextOrder->getStatus());*/
+
+// Strategy
+/*$collection = [['id' => 4], ['id' => 3]];
+$obj = new \DesignPatterns\Behavioral\Strategy\ObjectCollection($collection);
+$obj->setComparator(new \DesignPatterns\Behavioral\Strategy\IdComparator());
+$elements = $obj->sort();
+var_dump($elements);*/
