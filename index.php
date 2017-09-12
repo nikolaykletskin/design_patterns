@@ -183,3 +183,8 @@ $obj = new \DesignPatterns\Behavioral\Strategy\ObjectCollection($collection);
 $obj->setComparator(new \DesignPatterns\Behavioral\Strategy\IdComparator());
 $elements = $obj->sort();
 var_dump($elements);*/
+
+// Template Method
+$beachJourney = new DesignPatterns\Behavioral\TemplateMethod\BeachJourney();
+$beachJourney->takeATrip();
+var_dump($beachJourney->getThingsToDo());
